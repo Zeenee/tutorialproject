@@ -319,30 +319,49 @@ h4 {
   height: 150px;
   position: absolute;
   left: 62vw;
-  bottom: 34vh;
+  bottom: 38vh;
 }
 
 .intro h4 {
   left: -2vw;
-  top: 20vh;
+  top: 23vh;
+}
+
+.intro:hover img {
+  animation-play-state: paused;
 }
 
 @keyframes licat {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
   100% {
-    background-position: -667px 0;
+    transform: rotate(-10deg);
   }
 }
 
 .licat {
-  width: 167px;
-  height: 167px;
-  background: url('../images/licat_frame.png') no-repeat 0 0 / 667px 167px;
-  animation : licat 1s infinite steps(4);
+  /* width: 167px;
+  height: 167px; */
+  /* background: url('../images/licat_frame.png') no-repeat 0 0 / 667px 167px;
+  animation : licat 1s infinite steps(4); */
   transform: scale(0.8);
   position: relative;
   transition: all .4s;
 }
 
+.licat .hand{
+  position: relative;
+  animation: licat 1s infinite linear;
+  width: 70px;
+  height: 70px;
+  left: 58px;
+  top: -121px;
+  transition: all .4s;
+}
 /* 자바독 - 바울랩 wiki */
 .wiki {
   width: 167px;
