@@ -84,8 +84,7 @@ a {
 #main_contents .wrapper {
   display: flex;
   flex-direction:column;
-  justify-content: center;
-  width: 50vw;
+  width: 900px;
   height: auto;
   padding: 30px 0;
 }
@@ -107,12 +106,13 @@ a {
 }
 
 #main_contents .roadmap {
-  width: 50vw;
+  width: 800px;
   height: auto;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 #main_contents .roadmap img {
@@ -126,9 +126,9 @@ a {
   flex-direction: row;
   justify-content: space-between;
   padding-left: 42px;
-  width: 89.5%;
+  width: 720px;
   left: 0;
-  top: 370px;
+  top: 385px;
 }
 
 .roadmap .inner div {
@@ -137,7 +137,7 @@ a {
 }
 
 .roadmap .inner .lec {
-  width: 6vw;
+  width: 100px;
   height: auto;
   padding-bottom: 61px;
   transition: all .4s;
@@ -146,8 +146,13 @@ a {
 .roadmap .inner .lec:hover {
   transform: scale(1.1);
 }
+
+.lec img {
+  transition: all .4s;
+}
 .roadmap .inner .lec:hover img{
-  box-shadow:5px 5px 15px #606060;
+  box-shadow:5px 5px 15px #000;
+  transform: translateX(-3px) translateY(-3px);
 }
 
 @keyframes blink {
