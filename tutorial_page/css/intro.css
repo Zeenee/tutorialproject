@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'CookieRunOTF-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body { font-family: 'Nanum Gothic', sans-serif; }
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#home {
+  position: relative;
+}
+#home .wrapper {
+  padding: 20px 30px;
+}
+
+#home .home-btn {
+  position: relative;
+}
+
+#home .home-btn i {
+  font-size:2.5vw;
+  color:#000;
+  transition: all .3s;
+}
+
+#home .home-btn:hover i {
+  -ms-transform: rotate(360deg) scale(1.2); /* IE 9 */
+  -webkit-transform: rotate(360deg) scale(1.2); /* Safari 3-8 */
+  transform: rotate(360deg) scale(1.2);
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'CookieRunOTF-Bold', 'serif';
+  margin-bottom: 100px;
+}
+
+#title .title {
+  font-size: 3vw;
+  padding-bottom: 20px;
+}
+#title .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* 라이캣 */
+@keyframes licat {
+  100% {
+    background-position: -667px 0;
+  }
+}
+
+#title .title-img {
+  width: 167px;
+  height: 167px;
+  background: url('../images/licat_frame.png') no-repeat 0 0 / 667px 167px;
+  animation : licat 1s infinite steps(4);
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+/* 캐릭터 소개 */
+#main_contents {
+  display: flex;
+  justify-content: center;
+}
+
+#main_contents .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team {
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+}
+
+.team .member {
+  flex-basis: 200px;
+  flex-shrink: 0;
+  margin: 0 10px;
+  transform: scale(1) rotateY(720deg);
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.intro-active {
+  transform: scale(1.5) rotateY(0deg);
+}
+
+.member:hover {
+  flex-basis: 250px;
+  margin: 0 15px;
+}
+
+
+.member img {
+  width: 100%;
+  height: auto;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile:before {
+  content: ' ';
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 ); /* IE6-9 */
+  height: 160px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.profile .info {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  padding: 10px 10px;
+  color: #fff;
+}
+
+.profile .info h2 {
+  font-size: 20px;
+  font-family: 'CookieRunOTF-Bold', 'serif';
+  line-height: 1.5;
+}
+
+.profile .info h2 span {
+  display: block;
+  font-size: 15px;
+}
+
+.profile .info p {
+  font-size: 15px;
+  line-height: 1.3;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 5px;
+  transition: all .4s;
+  transition-delay: .2s;
+}
+
+.member:hover .info p {
+  max-height: 150px;
+}
