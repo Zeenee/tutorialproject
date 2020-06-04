@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+strong {
+  font-weight: bold;
+}
+
 #home {
   position: relative;
 }
@@ -152,7 +156,7 @@ a {
 }
 .roadmap .inner .lec:hover img{
   box-shadow:5px 5px 15px #000;
-  transform: translateX(-3px) translateY(-3px);
+  transform: translateX(-5px) translateY(-5px);
 }
 
 @keyframes blink {
@@ -171,6 +175,8 @@ a {
 
 .jejucoding-lec img {
   animation: blink 1s linear infinite;
+  transition: all .4s;
+  transition-delay: 1s;
 }
 
 .jejucoding-lec:hover img {

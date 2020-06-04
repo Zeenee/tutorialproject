@@ -144,7 +144,7 @@ h4 {
 
 /* 바울랩 - about */
 .paullab:hover img{
-  transform: scale(0.9);
+  transform: scale(1);
 }
 
 .paullab {
@@ -157,7 +157,7 @@ h4 {
 
 .paullab img {
   transition: all .4s;
-  transform: scale(0.8);
+  transform: scale(0.9);
 }
 
 .paullab h4 {
@@ -177,7 +177,7 @@ h4 {
 
 .menu h4 {
   position: absolute;
-  /* text-shadow: 0 0 2px #7CAE3D; */
+  text-shadow: 0 0 10px #7CAE3D;
 }
 
 .youtube h4{
@@ -193,7 +193,8 @@ h4 {
 }
 
 .menu:hover h4 {
-  color: red;
+  color: #DD3B3E;
+  text-shadow: 0 0 5px #fff;
 }
 
 @keyframes py_thon {
@@ -227,7 +228,7 @@ h4 {
 }
 
 .book h4 {
-  left: 100px;
+  left: 95px;
   top: 150px;
 }
 
@@ -333,13 +334,13 @@ h4 {
 
 @keyframes licat {
   0% {
-    transform: rotate(-10deg);
+    transform: rotate(-11deg);
   }
   50% {
-    transform: rotate(30deg);
+    transform: rotate(23deg);
   }
   100% {
-    transform: rotate(-10deg);
+    transform: rotate(-11deg);
   }
 }
 

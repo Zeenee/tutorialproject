@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
 #home {
   position: relative;
 }
