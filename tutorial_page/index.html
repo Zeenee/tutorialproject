@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
@@ -11,6 +11,13 @@
   <title>JejuCodingBaseCamp</title>
 </head>
 <body>
+  <!-- 모바일 세로모드일 경우에 표시 -->
+  <div id="message">
+    <div class="msg-img">
+      <img src="images/licat-hi.png" alt="">
+    </div>
+    <p>해당 웹 페이지는 가로모드만 지원합니다.</p>
+  </div>
   <!-- 전체 화면 및 메뉴 -->
   <section id="main_container">
     <div class="back">
@@ -28,8 +35,10 @@
       <div class="hallasan">
         <img src="images/hallasan.png" alt="">
       </div>
-      <div class="menu paullab scale">
-        <a href="about.html"><img src="images/paullab-blue.png" alt="#"></a>
+      <div class="menu paullab">
+        <a href="about.html">
+          <div class="paullab-frame scale"></div>
+        </a>
         <h4>About</h4>
       </div>
       <div class="news" onclick="openModal()">
@@ -60,7 +69,7 @@
         <h4>인프런</h4>
       </div>
       <div class="menu intro">
-        <a href="intro.html">
+        <a href="weniv.html">
           <div class="licat scale">
             <img src="images/licat-no-hand2.png" alt="">
             <img src="images/licat-hand.png" alt="" class="hand">
@@ -69,7 +78,7 @@
         <h4>캐릭터 소개</h4>
       </div>
       <div class="menu wiki">
-        <a href="http://paullabedu.synology.me/dokuwiki/doku.php">
+        <a href="http://paullabedu.synology.me/dokuwiki/doku.php" target="_blank">
           <div class="javadog scale"></div>
         </a>
         <h4>WIKI</h4>
@@ -163,7 +172,7 @@
                 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
               </p>
               <a href="#" class="readmore-btn" >
-                <i class="fa fa-arrow-circle-right"></i> Readmore
+                <i class="fa fa-arrow-circle-right"></i> Read more
               </a>
             </div>
           </div>

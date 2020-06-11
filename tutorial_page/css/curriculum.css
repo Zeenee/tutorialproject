@@ -46,12 +46,12 @@ strong {
   align-items: center;
   overflow: hidden;
   font-family: 'CookieRunOTF-Bold', 'serif';
-
 }
 
 #title .title {
   font-size: 70px;
   padding-bottom: 20px;
+  padding-right: 0;
 }
 #title .wrapper {
   display: flex;
@@ -113,9 +113,6 @@ strong {
   width: 800px;
   height: auto;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
 }
 

@@ -1,7 +1,15 @@
 @font-face {
   font-family: 'CookieRunOTF-Bold';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
-  font-weight: bold;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CookieRunOTF-Black';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Black00.woff')
+  format('woff');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -60,7 +68,7 @@ h4 {
   left: 0;
   top: 0;
   padding: 30px 40px;
-  font-family: 'CookieRunOTF-Bold', 'serif';
+  font-family: 'CookieRunOTF-Black';
 }
 
 #home .home-btn {
@@ -142,27 +150,50 @@ h4 {
   animation: hallasan 1s infinite;
 }
 
-/* 바울랩 - about */
-.paullab:hover img{
-  transform: scale(1);
+/* menu class 효과 */
+.menu h4 {
+  position: absolute;
+}
+.menu div:hover {
+  animation-play-state: paused;
+  transition: transform 0.5s;
+  transform: scale(0.9);
+  cursor: pointer;
 }
 
+.menu:hover h4 {
+  color: #DD3B3E;
+  text-shadow: 0 0 5px #fff;
+}
+
+/* 바울랩 - about */
 .paullab {
   position: absolute;
   left: 50vw;
-  top: 15vh;
-  width: 75px;
+  top: 12vh;
+  width: 97.5px;
   height: auto;
 }
 
-.paullab img {
+@keyframes paullab {
+  100% {
+    background-position: -4096px 0;
+  }
+}
+
+.paullab-frame {
+  width: 97.5px;
+  height: 145px;
+  background: url('../images/paullab-frame.png') no-repeat 0 0 / 4096px 145px;
+  animation: paullab 3.3s infinite steps(42);
+  position: absolute;
+  transform: scale(0.8);
   transition: all .4s;
-  transform: scale(0.9);
 }
 
 .paullab h4 {
   left: 70px;
-  top: 130px;
+  top: 145px;
 }
 
 /* 파이와 썬 - 유튜브 */
@@ -175,26 +206,9 @@ h4 {
   transition: all .4s;
 }
 
-.menu h4 {
-  position: absolute;
-  text-shadow: 0 0 10px #7CAE3D;
-}
-
 .youtube h4{
   left: 50px;
   top: 130px;
-}
-
-.menu div:hover {
-  animation-play-state: paused;
-  transition: transform 0.5s;
-  transform: scale(0.9);
-  cursor: pointer;
-}
-
-.menu:hover h4 {
-  color: #DD3B3E;
-  text-shadow: 0 0 5px #fff;
 }
 
 @keyframes py_thon {
@@ -221,10 +235,6 @@ h4 {
   width: 167px;
   height: 167px;
   transition: all .4s;
-}
-.book a {
-  width: 167px;
-  height: 167px;
 }
 
 .book h4 {
@@ -345,10 +355,6 @@ h4 {
 }
 
 .licat {
-  /* width: 167px;
-  height: 167px; */
-  /* background: url('../images/licat_frame.png') no-repeat 0 0 / 667px 167px;
-  animation : licat 1s infinite steps(4); */
   transform: scale(0.9);
   position: relative;
   transition: all .4s;
@@ -363,6 +369,7 @@ h4 {
   top: -121px;
   transition: all .4s;
 }
+
 /* 자바독 - 바울랩 wiki */
 .wiki {
   width: 167px;
@@ -450,7 +457,6 @@ h4 {
 .wind img{
   width: 100px;
   height: 100px;
-  /* background: url('../images/windmill_frame.png') no-repeat 0 0 / 400px 100px; */
   animation: windmill 2s infinite linear;
   position: relative;
 }
@@ -584,7 +590,7 @@ h4 {
 }
 
 #modal .window .header .title {
-  font-size: 25px;
+  font-size: 2vw;
   font-family: 'CookieRunOTF-Bold', 'serif';
 }
 
@@ -594,7 +600,7 @@ h4 {
 
 #modal .window .header .close-btn i {
   color:#dbdbdb;
-  font-size:35px;
+  font-size:2vw;
   transition: all .5s;
 }
 
@@ -625,7 +631,7 @@ h4 {
   padding-bottom: 35px;
 }
 .post-title {
-  font-size: 25px;
+  font-size: 1.5vw;
   padding: 10px 0;
   color: #55A79A;
   font-weight: bold;
@@ -636,15 +642,216 @@ h4 {
 }
 
 .post-explanation {
+  font-size: 1.2vw;
   line-height: 1.3;
   padding-bottom: 10px;
 }
 
 .readmore-btn {
-  font-size: 20px;
+  font-size: 1.2vw;
   align-items: center;
 }
 
+/* 메시지 */
+#message {
+  display: none;
+}
+
+#message .msg-img {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#message p {
+  font-size: 15px;
+  font-family: 'CookieRunOTF-Bold';
+}
+
+/* 반응형 */
+/* 세로모드 */
+@media only screen and (orientation:portrait) {
+  #main_container {
+    height: 100vw;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    display: none;
+  }
+  #message {
+    display: block;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: 30vh;
+  }
+}
+
+@media all and (min-width:480px) and (max-width:767px) {
+  h4 {
+    font-size: 5px;
+  }
+
+  .scale {
+    transform: scale(0.4);
+  }
+
+  .etc {
+    transform: scale(0.5);
+  }
+
+  .youtube, .q_a, .wiki, .curriculum {
+    width: 105px;
+    height: auto;
+  }
+
+  @keyframes hallasan {
+    0%{
+      transform: scale(0.2);
+    }
+    100% {
+      transform: scale(0.3);
+    }
+  }
+
+  #home {
+    padding: 15px 25px;
+  }
+
+  #home .home-btn p {
+    font-size: 23px;
+  }
+
+  .hallasan {
+    left: 30vw;
+    top: 20vh;
+  }
+
+  .paullab {
+    left: 46vw;
+    top: 3vh;
+  }
+
+  .paullab h4 {
+    left: 62px;
+    top: 112px;
+  }
+
+  .youtube{
+    left: 22vw;
+    top: 15vh;
+  }
+
+  .youtube h4 {
+    left: 85px;
+    top: 95px;
+  }
+
+  .book {
+    left: 8vw;
+    top: 20vh;
+  }
+
+  .book h4 {
+    left: 97px;
+    top: 110px;
+  }
+
+  .q_a {
+    left: 10vw;
+    top: 41vh;
+  }
+
+  .q_a h4 {
+    left: 110px;
+    top: 100px;
+  }
+
+  .online_lec {
+    left: 37vw;
+    bottom: 13vh;
+  }
+
+  .online_lec h4{
+    left: 40px;
+    top: 105px;
+  }
+
+  .intro {
+    left: 56vw;
+    bottom: 38vh;
+  }
+
+  .intro h4 {
+    left: 20px;
+    top: 160px;
+  }
+
+  .wiki {
+    left: 64vw;
+    top: 16vh;
+  }
+
+  .wiki h4 {
+    left: 50px;
+    top: 110px;
+  }
+
+  .curriculum {
+    left: 57vw;
+    top: 2vh;
+  }
+
+  .curriculum h4 {
+    left: 40px;
+    top: 125px;
+  }
+
+  .windmill {
+    left: 53vw;
+    top: 12vh;
+  }
+
+  .parasol {
+    left: 12vw;
+  }
+
+  .dolharbang {
+    left: 95px;
+    bottom: 25px;
+  }
+
+  .sns{
+    right: 0;
+    bottom: 5px;
+  }
+
+  .news {
+    left: 65vw;
+    top: -20px;
+  }
+
+  .news:hover div{
+    transform: scale(0.5);
+  }
+
+  #modal .window .header {
+    padding: 10px 20px;
+  }
+}
+
+
+@media all and (min-width:768px) and (max-width:1024px){
+  h4{
+    font-size: 15px;
+  }
+  #home .home-btn p {
+    font-size: 30px;
+  }
+}
 
 @media all and (min-width:1920px) and (max-width:2048px) {
   h4{
@@ -671,11 +878,12 @@ h4 {
   .news:hover div{
     transform: scale(1.3);
   }
+
   .paullab {
-    top: 16vh;
+    top: 13vh;
   }
   .paullab h4 {
-    top: 150px;
+    top: 180px;
   }
   .youtube h4 {
     top: 170px;
